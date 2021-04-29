@@ -1,0 +1,58 @@
+// Banners
+.banners
+	+flex
+	+flexWrap
+	width: 100%
+	.banner
+		position: relative
+		overflow: hidden
+		margin: 0px
+		width: 33.3%
+		&:before
+			border-left: 1px solid $colBase3
+			content: ""
+			height: 100%
+			position: absolute
+			right: 0px
+			top: 0px
+		&:last-of-type
+			&:before
+				display: none
+		&:nth-of-type(3n+1):nth-last-of-type(-n+2)
+			width: 50%
+			+ .banner
+				width: 50%
+		&:nth-of-type(3n+1):nth-last-of-type(-n+1)
+			width: 100%
+		> .multimedia
+			min-height: inherit
+			height: 400px
+	.contInfo
+		+alignItem
+		+bx
+		+flex
+		+justifyCont
+		height: 100%
+		overflow: hidden
+		padding: 1rem
+		position: absolute
+		top: 0px
+		width: 100%
+		.info
+			text-align: center
+			width: 100%
+		// h1, h2, h3, h4, p
+		// 	color: $White	
+
+// Responsive Smartphone
+@mixin banners-smartphone
+	// Banners
+	.banners
+		.banner
+			width: 100%
+			&:nth-of-type(3n+1):nth-last-of-type(-n+2) 
+				width: 100%
+				+ .banner
+					width: 100%
+			&:nth-of-type(3n+1):nth-last-of-type(-n+1)
+				width: 100%

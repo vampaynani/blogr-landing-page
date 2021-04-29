@@ -1,0 +1,221 @@
+//- Mixines
+=bx($value: border-box)
+	-moz-box-sizing: $value
+	-webkit-box-sizing: $value
+	box-sizing: $value
+
+=fonIco($value)
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	content: $value
+	font-family: 'icomoon'
+	font-style: normal
+	font-variant: normal
+	font-weight: normal
+	line-height: 1
+	speak: none
+	text-transform: none
+
+=icons($value)
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	content: $value
+	direction: ltr
+	display: inline-block
+	font-family: 'Material Icons'
+	font-feature-settings: 'liga'
+	font-style: normal
+	font-weight: normal
+	letter-spacing: normal
+	line-height: 1
+	text-rendering: optimizeLegibility
+	text-transform: none
+	white-space: nowrap
+	word-wrap: normal
+
+=object($dir: cover)
+	-o-object-fit: $dir
+	object-fit: $dir
+
+=delay($dir: 1s)
+	-webkit-transition-delay: $dir
+	-moz-transition-delay: $dir
+	-o-transition-delay: $dir
+	transition-delay: $dir
+
+=filter($grayscale: 1, $opacity: 100%, $brightness: 100%)
+	-moz-filter: grayscale($grayscale) opacity($opacity) brightness($brightness)
+	-ms-filter: grayscale($grayscale) opacity($opacity) brightness($brightness)
+	-o-filter: grayscale($grayscale) opacity($opacity) brightness($brightness)
+	-webkit-filter: grayscale($grayscale) opacity($opacity) brightness($brightness)
+	filter: grayscale($grayscale) opacity($opacity) brightness($brightness)
+
+=appearance
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+=center($value: v)
+	position: absolute
+	@if $value == v
+		-webkit-transform: translateX(-50%)
+		-moz-transform: translateX(-50%)
+		-ms-transform: translateX(-50%)
+		transform: translateX(-50%)
+		left: 50%
+	@else if $value == h
+		-webkit-transform: translateY(-50%)
+		-moz-transform: translateY(-50%)
+		-ms-transform: translateY(-50%)
+		transform: translateY(-50%)
+		top: 50%
+	@else if $value == vh
+		-webkit-transform: translate(-50%, -50%)
+		-moz-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		top: 50%
+		left: 50%
+	@else if $value == r
+		-webkit-transform: translate(0%, 0%)
+		-moz-transform: translate(0%, 0%)
+		-ms-transform: translate(0%, 0%)
+		transform: translate(0%, 0%)
+		position: inherit
+		top: inherit
+		left:  inherit
+
+=transForm($value1)
+	-webkit-transform: $value1
+	-moz-transform: $value1
+	-ms-transform: $value1
+	transform: $value1
+
+=translate($value1,$value2 )
+	-webkit-transform: translate($value1, $value2)
+	-moz-transform: translate($value1, $value2)
+	-ms-transform: translate($value1, $value2)
+	transform: translate($value1, $value2)
+
+=scale($value1,$value2 )
+	-webkit-transform: scale($value1, $value2)
+	-moz-transform: scale($value1, $value2)
+	-ms-transform: scale($value1, $value2)
+	transform: scale($value1, $value2)
+
+=transformr
+	-webkit-transform: inherit
+	-moz-transform: inherit
+	-ms-transform: inherit
+	transform: inherit
+
+=gradient($deg, $color_A, $color_B)
+	background: $color_A
+	background: -moz-linear-gradient($deg, $color_A 50%, $color_B 50%)
+	background: -webkit-gradient($deg, color-stop(50%, $color_A), color-stop(50%, $color_B))
+	background: -webkit-linear-gradient($deg, $color_A 50%, $color_B 50%)
+	background: -o-linear-gradient($deg, $color_A 50%, $color_B 50%)
+	background: -ms-linear-gradient($deg, $color_A 50%, $color_B 50%)
+	background: linear-gradient($deg, $color_A 50%, $color_B 50%)
+	@if $deg >=0 and $deg <=90
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color_A}', endColorstr='#{$color_B}', GradientType=0 )
+	@if $deg >=91 and $deg <=180
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color_A}', endColorstr='#{$color_B}', GradientType=1 )
+	@if $deg >=181 and $deg <=270
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color_B}', endColorstr='#{$color_A}', GradientType=0 )
+	@if $deg >=271 and $deg <=360
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color_B}', endColorstr='#{$color_A}', GradientType=1 )
+
+=fx($elem, $time: 1s)
+	-webkit-transition: $elem $time
+	-moz-transition: $elem $time
+	-ms-transition: $elem $time
+	transition: $elem $time
+=fxr
+	-webkit-transition: inherit
+	-moz-transition: inherit
+	-ms-transition: inherit
+	transition: inherit
+
+=shadow($s1: 0px, $s2: 5px, $s3: 11px, $s4: 0px, $alpha: rgba(0,0,0,0.18), $s12: 0px, $s22: 4px, $s32: 15px, $s42: 0px, $alpha2: rgba(0,0,0,0.15))
+	-webkit-box-shadow: $s1 $s2 $s3 $s4 $alpha, $s12 $s22 $s32 $s42 $alpha2
+	-moz-box-shadow: $s1 $s2 $s3 $s4 $alpha, $s12 $s22 $s32 $s42 $alpha2
+	-o-box-shadow: $s1 $s2 $s3 $s4 $alpha, $s12 $s22 $s32 $s42 $alpha2
+	-ms-box-shadow: $s1 $s2 $s3 $s4 $alpha, $s12 $s22 $s32 $s42 $alpha2
+	box-shadow: $s1 $s2 $s3 $s4 $alpha, $s12 $s22 $s32 $s42 $alpha2
+
+=shadowr
+	-webkit-box-shadow: none
+	-moz-box-shadow: none
+	-o-box-shadow: none
+	-ms-box-shadow: none
+	box-shadow: none
+
+=fawesome($value)
+	content: $value
+	font-family: 'Font Awesome 5 Free'
+	font-weight: 900
+
+=iconBg($img: icon-menu, $ancho: 40px, $alto: 40px)
+	content: " "
+	display: inline-block
+	background: url(img/#{$img}.png) no-repeat
+	background-position: 0 0
+	width: $ancho
+	height: $alto
+
+
+//- Bloque Experimental Flex
+=flex
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	webkit-display: -webkit-flex
+	display: -webkit-flex
+	display: flex
+
+=flexDir($dir: column)
+	flex-direction: $dir
+	-webkit-box-direction: $dir
+	-webkit-flex-direction: $dir
+	-ms-flex-direction: $dir
+
+=flexDirRow($dir: row)
+	flex-direction: $dir
+	-webkit-box-direction: $dir
+	-webkit-flex-direction: $dir
+	-ms-flex-direction: $dir
+
+=flexWrap($dir: wrap)
+	flex-wrap: $dir
+	-webkit-box-wrap: $dir
+	-webkit-flex-wrap: $dir
+	-ms-flex-wrap: $dir
+
+=alignItem($dir: center)
+	align-items: $dir
+	-webkit-align-items: $dir
+	-ms-flex-align: $dir
+
+=alignCont($dir: flex-start)
+	align-content: $dir
+	-webkit-align-content: $dir
+
+=justifyCont($dir: center)
+	justify-content: $dir
+	-webkit-justify-content: $dir
+	-ms-flex-pack: $dir
+	@if $dir == "flex-end"
+		-ms-flex-pack: end
+	@if $dir == "flex-start"
+		-ms-flex-pack: start
+	@if $dir == "space-around"
+		-ms-flex-pack: justify
+	@if $dir == "space-between"
+		-ms-flex-pack: justify
+=order($dir)
+	order: $dir
+	-webkit-order: $dir
+=alignSelf($dir: center)
+	align-self: $dir
+	-webkit-align-self: $dir

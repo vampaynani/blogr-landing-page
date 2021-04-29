@@ -1,0 +1,42 @@
+// Feed Redes
+.feedRedes
+	+flex
+	margin: 0px -0.5rem
+	.feed
+		+bx
+		max-width: inherit
+		padding: 0px 0.5rem
+		width: 100%
+.feed
+	margin: 2rem auto
+	overflow: hidden
+	display: block
+	max-width: 340px
+	&:hover
+		i
+			color: $Razzmatazz
+		.multimedia
+			img
+				opacity: 1
+				+scale(1.08,1.08)
+	i
+		+fx(all,0.5s)
+		color: $Gray
+		display: table
+		font-size: 3rem
+		margin: 0px auto 2rem
+	p
+		+fx(all,0.5s)
+		color: $Gray
+		font-size: 1.25rem
+		text-align: center
+	.multimedia
+		+fx(all,0.5s)
+		background: $Black
+		img
+			opacity: 0.25
+// Responsive Smartphone
+@mixin feedRedes-smartphone
+	// Feed Redes
+	.feedRedes
+		+flexWrap

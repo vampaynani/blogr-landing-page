@@ -1,0 +1,28 @@
+// Tags
+.tags
+	display: table
+	overflow: hidden
+	margin: 1.25rem auto
+	p
+		display: inline-block
+		font-size: 0.75rem
+		margin-right: 0.5rem
+	a
+		color: $Razzmatazz
+		display: inline-block
+		font-size: 0.75rem
+		font-weight: 500
+		margin-right: 0.5rem
+		text-decoration: underline
+		&:last-of-type
+			margin-right: 0px
+	&.right
+		margin: 1.25rem 0px
+	&.left
+		margin: 1.25rem 0px
+
+// Responsive Smartphone
+@mixin tags-smartphone
+	.tags
+		float: none!important
+		width: 100%

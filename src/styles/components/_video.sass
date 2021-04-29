@@ -1,0 +1,30 @@
+// Video
+.video
+	+bx
+	border: 1px solid $Razzmatazz
+	display: table
+	margin: 1.25rem auto
+	overflow: hidden
+	position: relative
+	.img
+		display: block
+		overflow: hidden
+		cursor: pointer
+		&:before
+			+fx(all,0.5s)
+			+center(vh)
+			+fonIco('\e90a')
+			color: $Razzmatazz
+			font-size: 8.5rem
+		&:hover
+			&:before
+				font-size: 9rem
+		> img
+			display: block
+			max-width: 100%
+			margin: 0px
+	> video
+		display: none
+		max-width: 100%
+	> iframe
+		max-width: 100%

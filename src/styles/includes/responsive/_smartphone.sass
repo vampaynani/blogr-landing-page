@@ -1,0 +1,45 @@
+@media only screen and (max-width: 767px)
+	html
+		font-size: 16px
+	body
+		height: 100vh
+	h1
+		font-size: 3.125rem
+	h2
+		font-size: 1.875rem
+
+	// Helpers
+
+	.rmvMar
+		margin: 0px auto!important
+
+	.container
+		margin: auto
+		max-width: 767px!important
+		padding: 0px 20px
+		width: 100%
+	
+	// Responsive Base
+	@include ndGrid-smartphone
+	// Responsive Plugins
+
+	// Responsive Components
+	@include banners-smartphone
+	// @include botones-smartphone
+	@include feedRedes-smartphone
+	@include full-smartphone
+	@include hamburguesa-smartphone
+	@include logotipo-smartphone
+	@include ndtable-smartphone
+	@include producto-smartphone
+	@include productos-smartphone
+	@include subMenu-smartphone
+	@include tags-smartphone
+	// Responsive Layout
+	@include ndHeader-smartphone
+	@include ndFooter-smartphone
+	// Responsive custom-page
+	@include coverSlider-smartphone
+	// @include categorias-smartphone
+	@include notas-smartphone
+	@include homeCategorias-smartphone

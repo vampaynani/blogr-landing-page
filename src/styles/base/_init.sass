@@ -1,0 +1,238 @@
+// init
+
+html
+	+fx(font-size, 0.2s)
+	-webkit-font-smoothing: antialiased
+	font-family: 'Montserrat', sans-serif
+	font-size: 16px
+	font-weight: 400
+	text-rendering: optimizeLegibility
+	-webkit-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	&.base1
+		font-size: 17px
+	&.base2
+		font-size: 18px
+	&.base3
+		font-size: 19px
+					
+html, body
+	position: relative
+	width: 100%
+
+body
+	-webkit-overflow-scrolling: touch
+	display: block
+	line-height: 1.45
+	margin: auto
+	max-width: 2560px
+	padding: 0px
+	position: relative
+	width: 100%
+	> iframe
+		position: absolute
+	&.hidden
+		overflow: hidden
+
+h1
+	color: $colBase3
+	font-size: 2.4375rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+h2
+	color: $colBase3
+	font-size: 1.9375rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+h3
+	color: $colBase3
+	font-size: 1.5625rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+h4
+	color: $colBase3
+	font-size: 1.25rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+h5
+	color: $colBase3
+	font-size: 1rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+h6
+	color: $colBase3
+	font-size: 0.75rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+p
+	color: $colBase3
+	font-size: 1rem
+	font-weight: 400
+	line-height: 1.2
+	margin: 1.25rem 0px
+	strong
+		font-weight: 700
+a
+	word-break: break-all
+	color: $colBase1
+	text-decoration: none
+	font-weight: 500
+
+img
+	display: block
+	margin: 1.25rem 0px
+	max-width: 100%
+
+small
+	font-size: smaller
+
+pre
+	color: $colBase3
+	display: block
+	font-size: 1rem
+	font-weight: 400
+	line-height: 1.2
+	margin-bottom: 1.25rem
+	white-space: pre-line
+
+blockquote
+	margin: 1.25rem 0px
+	padding-left: 1rem
+	border-left: 4px solid $colBase3
+
+figure
+	display: table
+	margin: 1.25rem auto
+	&.right, &.left
+		margin: 1.25rem
+	img
+		margin: 0px
+
+table:not(.datepicker-table)
+	border: 1px solid $colBase3
+	overflow: auto
+	margin: 1.25rem 0px
+	thead
+		color: $colBase3
+	td, th
+		border: 1px solid $colBase3
+		padding: 8px
+	td
+		color: $colBase3
+		font-size: 1rem
+		font-weight: 400
+		line-height: 1.2
+		margin: 1.25rem 0px
+		vertical-align: top
+	tr:nth-child(even)
+		background: $colBase3
+	h1, h2, h3, h4, h5, h6, p
+		margin: 0px
+		padding: 1.25rem
+
+header
+	max-width: 2560px
+	width: 100%
+	&.fixed
+		position: fixed
+		top: 0px
+		z-index: 99
+main
+	margin: auto
+	// margin-top: 4.375rem
+	// min-height: calc(100vh - 4.375rem)
+	position: relative
+	width: 100%
+
+section
+	max-width: 2560px
+	width: 100%
+
+button
+	background: none
+	border: none
+	padding: 0px
+	&:focus
+		background-color: none
+
+footer
+	max-width: 2560px
+	width: 100%
+
+sub, sup
+	font-size: 75%
+	line-height: 0
+	position: relative
+	vertical-align: baseline
+sup
+	top: -0.328125rem
+sub
+	bottom: -0.164062rem
+
+hr
+	clear: both
+	margin: 1.25rem auto 0px
+	width: 100%
+
+// Helpers
+
+.marBot1
+	margin-bottom: 1.25rem
+.marTop1
+	margin-top: 1.25rem
+.padBot1
+	padding-bottom: 1.25rem
+.padTop1
+	padding-top: 1.25rem
+.rmvPad
+	padding: 0px!important
+.rmvMar
+	margin: 0px!important
+
+.algText
+	text-align: center
+
+.textWhite
+	color: $White
+
+.black
+	background: $colBase1
+
+.contenScroll
+	overflow: auto
+	height: 100vh
+	width: 100%
+
+.container
+	+bx
+	height: 100%
+	margin: 0 auto
+	max-width: 1440px
+	overflow: hidden
+	padding: 0px 15px
+	position: relative
+	width: 100%
+.contenedor
+	height: 100%
+	margin: auto
+	max-width: 1500px
+	width: 100%

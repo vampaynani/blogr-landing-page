@@ -1,0 +1,49 @@
+// SubMenu
+.subMenu
+	+flex
+	+justifyCont(space-between)
+	position: relative
+	overflow: hidden
+	li
+		+fx(all,0.5s)
+		cursor: pointer
+		padding: 2rem 0px
+		width: 100%
+		&:hover, &.activo
+			span
+				color: $colPrim1
+				&:before
+					background: $colPrim1
+					width: 100%
+
+	span
+		+fx(all,0.5s)
+		color: $colBase3
+		display: table
+		font-size: 1.25rem
+		font-weight: 500
+		height: 100%
+		margin: 0px auto
+		padding: 0px 0.5rem
+		position: relative
+		&:before
+			+center(v)
+			+fx(all,0.5s)
+			background: transparent
+			top: 100%
+			content: " "
+			display: block
+			height: 5px
+			width: 0%
+
+.interacionMenu
+	display: none
+
+// Responsive Smartphone
+@mixin subMenu-smartphone
+	// SubMenu
+	.subMenu
+		+flexWrap
+		li
+			width: 100%
+			padding: 0.5rem 0px

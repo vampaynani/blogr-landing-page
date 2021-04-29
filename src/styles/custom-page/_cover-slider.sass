@@ -1,0 +1,56 @@
+// Cover Slider
+.cover-slider
+	overflow: hidden
+	position: relative
+	.nd-Slider
+		padding-bottom: 0px
+		/* Arrows */
+		.slick-prev,
+		.slick-next
+			background: $White
+			color: $White
+			&:hover, &:focus
+				background: $White
+				color: $White
+		.slick-prev:before, .slick-next:before
+			color: $White
+		/* Dots */
+
+		.slick-dots
+			li
+				button
+					&:hover, &:focus
+						background: $White
+						border: 1px solid $White
+				&.slick-active button
+					background: $White
+					border: 1px solid $White
+
+	.slidCont
+		display: block !important
+		height: calc(100vh - 4.25rem)
+		min-height: 599px
+		position: relative
+	.multimedia
+		position: absolute
+		top: 0px
+		height: 100%
+		width: 100%
+	.full
+		margin-bottom: 0px
+	.contInfo
+		padding: 0px
+		position: inherit
+		width: 100%
+	h2
+		font-size: 3.125rem
+
+// Responsive Smartphone
+@mixin coverSlider-smartphone
+	// Cover
+	.cover-slider
+		h1, h2, h3, h4, h5, h6, p
+			text-align: center
+		.boton
+			margin: 1.25rem auto
+			float: none!important

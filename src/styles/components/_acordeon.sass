@@ -1,0 +1,39 @@
+// Acordeon
+.acordeon
+	overflow: hidden
+	padding-bottom: 1.25rem
+	position: relative
+	width: 100%
+	dl
+		margin-bottom: 1.25rem
+		overflow: hidden
+	dt
+		background: $colPrim1
+		cursor: pointer
+		overflow: hidden
+		h3, h4, h5, h6
+			color: $colSec2
+			padding-left: 32px
+			position: relative
+			&:before
+				+center(h)
+				background: $colSec2
+				content: ""
+				height: 5px
+				left: 0px
+				width: 24px
+			&:after
+				+center(h)
+				+fawesome('\f067')
+				color: $colSec2
+				cursor: pointer
+				font-size: 11px
+				right: 0px
+		&.activo
+			h3, h4, h5, h6
+				&:after
+					content: "\f068"
+	dd
+		display: none
+		margin: 1.25rem 0px
+		overflow: hidden

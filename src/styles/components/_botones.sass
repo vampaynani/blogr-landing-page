@@ -1,0 +1,57 @@
+// Botones
+.botones
+	display: table
+	margin: auto
+	.boton
+		display: inline-block
+		margin: 1.25rem 0.5rem
+		min-width: auto
+.boton
+	+bx
+	+fx(all,0.5s)
+	border-radius: 70px
+	border: 1px solid $colBase3
+	clear: both
+	color: $colBase3
+	cursor: pointer
+	display: table
+	font-size: 0.625rem
+	font-weight: 500
+	line-height: 1.2
+	margin: 1.25rem auto
+	min-width: 120px
+	padding: 10px 1rem
+	position: relative
+	text-align: center
+	text-decoration: none
+	text-transform: uppercase
+	&:hover
+		background: $colPrim1
+		border: 1px solid $colPrim1
+		color: $colBase2
+	&.secundario
+		border: 1px solid $colBase2
+		color: $colBase2
+		&:hover
+			background: $colBase2
+			border: 1px solid $colBase2
+			color: $colPrim1
+	&.disabled
+		cursor: default
+		&:hover
+			+shadowr
+	&.right
+		margin: 1.25rem 0px
+	&.left
+		margin: 1.25rem 0px
+
+// Responsive Smartphone
+@mixin botones-smartphone
+	// Botones
+	.boton
+		&.right
+			margin: 1.25rem auto
+			float: none!important
+		&.left
+			margin: 1.25rem auto
+			float: none!important

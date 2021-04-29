@@ -1,0 +1,82 @@
+.header
+	+shadow
+	background: $colPrim1
+	position: relative
+	.menu
+		+flex
+		height: 50px
+	nav
+		+flex
+		+justifyCont
+		margin: 0px auto
+		ul
+			display: table
+			height: 100%
+			margin: 0px
+			li
+				display: table
+				float: left
+				height: 100%
+				&:hover, &.current_page_item
+					a
+						&:before
+							background: $colBase2
+							width: 100%
+				a
+					+fx(all,0.5s)
+					color: $colBase2
+					display: table-cell
+					font-size: 0.75rem
+					font-weight: 700
+					padding: 0px 1rem
+					position: relative
+					text-align: center
+					text-decoration: none
+					vertical-align: middle
+					&:before
+						+center(v)
+						+fx(all,0.5s)
+						background: transparent
+						bottom: -5px
+						content: " "
+						display: block
+						height: 3px
+						width: 0%
+
+@mixin ndHeader-smartphone
+	.header
+		.menu
+			display: block
+		// nav
+		// 	display: none
+		// 	ul
+		// 		+flex
+		// 		+flexDir
+		// 		height: calc(100vh - 68px)
+		// 		li
+		// 			+alignItem
+		// 			+flex
+		// 			border-bottom: 1px solid $Mercury
+		// 			float: none
+		// 			overflow: hidden
+		// 			position: relative
+		// 			max-height: 75px
+		// 			&:hover, &.current_page_item
+		// 				a
+		// 					&:before
+		// 						width: 0px
+		// 			&:last-of-type
+		// 				border-bottom: none
+		// 			a
+		// 				display: block
+		// 				padding: 29px 0px
+		// 				position: static
+		// 				text-align: inherit
+		// 				width: 100%
+		// .controles
+		// 	margin: 35px -0.5rem
+		// 	position: absolute
+		// 	right: 20px
+		// 	top: 0px
+		// .settings
+		// 	display: none

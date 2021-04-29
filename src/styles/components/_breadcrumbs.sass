@@ -1,0 +1,10 @@
+// Breadcrumbs
+.breadcrumbs
+	margin: 2.5rem auto 1.25rem
+	text-transform: uppercase
+	a
+		&:after
+			content: " / "
+		&:last-of-type
+			&:after
+				display: none

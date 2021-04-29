@@ -1,0 +1,44 @@
+// Productos
+.productos
+	+flex
+	+flexDir
+	height: calc(100% - 1.25rem)
+	margin-bottom: 1.25rem
+	&:hover
+		.multimedia
+			background: $Razzmatazz
+			img
+				+scale(1.08,1.08)
+	.multimedia
+		+bx
+		+flex
+		+fx(all,0.5s)
+		background: $Black
+		height: 12.5rem
+		padding: 1.25rem
+		img
+			height: auto
+			margin: auto
+			max-height: 100%
+			width: auto
+	.info
+		+alignCont(space-between)
+		+bx
+		+flex
+		+flexWrap
+		background: $Concrete
+		height: calc(100% - 12.5rem)
+		padding: 0px 1rem
+	h1, h2, h3, h4, h5, h6, p
+		margin-bottom: 0px
+		width: 100%
+
+// Responsive Smartphone
+@mixin productos-smartphone
+	// Productos
+	.productos
+		height: auto
+		.multimedia
+			height: auto
+		.info
+			height: auto

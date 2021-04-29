@@ -1,0 +1,43 @@
+// Table
+.table
+	+bx
+	padding: 0px 1rem
+	width: 100%	
+	table
+		border: 1px solid $Tuna
+		margin: 1.25rem auto
+		width: 100%
+	td, th
+		+bx
+		padding: 1rem
+		border: none
+	th
+		text-align: center
+		font-weight: 700
+		font-size: 1.5rem
+	td
+		text-align: center
+		&:first-of-type
+			text-align: left
+	tr:nth-child(even)
+		background: none
+	tbody
+		tr
+			&:nth-child(odd)
+				background: $Tuna
+				td
+					color: $White
+
+// Responsive Smartphone
+@mixin ndtable-smartphone
+	// Table
+	.table
+		table
+			tr, th
+				display: block
+			td
+				display: block
+				width: 100%
+				text-align: center
+				&:first-of-type
+					text-align: center

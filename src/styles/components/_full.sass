@@ -1,0 +1,82 @@
+// Full
+.full
+	margin-bottom: 1.625rem
+	&.algCenter
+		.contInfo
+			+alignItem
+		&.algTop
+			.contInfo
+				+alignItem(flex-start)
+		&.algBottom
+			.contInfo
+				+alignItem(flex-end)
+	&.algTop
+		.contInfo
+			+alignItem(flex-start)
+	&.algBottom
+		.contInfo
+			+alignItem(flex-end)
+	&.algLeft
+		.contInfo
+			+justifyCont(flex-start)
+			.info
+				width: 50%
+	&.algRight
+		.contInfo
+			+justifyCont(flex-end)
+			.info
+				width: 50%
+	&.jusCenter
+		.contInfo
+			+justifyCont
+			.info
+				text-align: center
+				.boton, .link
+					margin: 1.25rem auto
+					float: none!important
+		&.algLeft
+			.contInfo
+				+justifyCont(flex-start)
+		&.algRight
+			.contInfo
+				+justifyCont(flex-end)
+	&.textWhite
+		h1, h2, h3, h4, p
+			color: $White
+			+ p
+				color: $White
+				font-weight: 400
+				&.linea
+					&:after
+						color: $White
+	.contInfo
+		+bx
+		+flex
+		padding: 1rem 5rem
+		height: 100%
+		position: absolute
+		overflow: hidden
+		top: 0px
+		width: calc(100% - 1rem)
+		pointer-events: none
+		.info
+			pointer-events: auto
+			max-width: 700px
+			width: 100%
+	.multimedia
+		height: 100%
+		min-height: 650px
+
+// Responsive Smartphone
+@mixin full-smartphone
+	// Full
+	.full
+		// min-height: 450px
+		&.algLeft, &.algRight
+			.contInfo
+				.info
+					width: 100%
+		.contInfo
+			padding: 1rem
+			img
+				margin: 1.25rem auto

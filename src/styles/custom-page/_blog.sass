@@ -1,0 +1,75 @@
+// Notas
+.notas
+	overflow: hidden
+	position: relative
+	&.modulo-a
+		[class^="col-"], [class*=" col-"]
+			&:nth-of-type(-n+1)
+				max-width: 66.66666667%
+	&.modulo-b
+		[class^="col-"], [class*=" col-"]
+			&:nth-of-type(5n+2)
+				max-width: 66.66666667%
+	&.modulo-c
+		[class^="col-"], [class*=" col-"]
+			&:nth-of-type(5n+5)
+				max-width: 66.66666667%
+	[class^="col-"], [class*=" col-"]
+		margin-bottom: 1.625rem
+	.full, .loop
+		.multimedia
+			height: 100%
+		.contInfo
+			border: none
+			width: calc(100% - 1rem)
+	.loop
+		.contInfo
+			padding: 1rem
+	.multimedia
+		height: 15.625rem
+		&:hover
+			img
+				+scale(1.08,1.08)
+	.categoria
+		color: $Silver
+		display: block
+		font-size: 0.75rem
+		font-weight: 500
+		margin-bottom: 0.5rem
+		+ h1, + h2, + h3, + h4
+			margin-top: 0px
+	.contInfo
+		+bx
+		border: 1px solid $Mercury
+		min-height: calc(100% - 15.625rem)
+		overflow: hidden
+		padding: 1rem
+		padding-bottom: 3rem
+		width: 100%
+	.info
+		overflow: hidden
+		width: 100%
+	.link
+		bottom: 0px
+		margin: 1rem 0px
+		position: absolute
+		right: 1rem
+
+@mixin notas-smartphone
+	.notas
+		&.modulo-a
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(-n+1)
+					max-width: 100%
+		&.modulo-b
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(5n+2)
+					max-width: 100%
+		&.modulo-c
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(5n+5)
+					max-width: 100%
+		.multimedia
+			height: auto
+		.contInfo
+			min-height: auto

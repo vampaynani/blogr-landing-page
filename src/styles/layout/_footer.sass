@@ -1,0 +1,26 @@
+.footer
+	background: $colBase1
+	overflow: hidden
+	position: relative
+	width: 100%
+	h6
+		color: $colBase2
+	li
+		a
+			font-size: 0.75rem
+			color: $colBase2
+			font-weight: 500
+			&:hover
+				text-decoration: underline	
+.legales
+	background: $colPrim1
+	margin-top: 1rem
+	p
+		color: $colBase2
+		font-weight: 500
+
+@mixin ndFooter-smartphone
+	.footer
+		.legales
+			p
+				text-align: center

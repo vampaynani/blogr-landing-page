@@ -1,0 +1,21 @@
+// @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape)
+
+
+// @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : portrait)
+
+
+//Tablet Portrait size to standard 960 (devices and browsers)
+@media only screen and (min-width: 768px) and (max-width: 959px)
+	html
+		font-size: 11px
+		&.base1
+			font-size: 12px
+		&.base2
+			font-size: 13px
+		&.base3
+			font-size: 14px
+	.container
+		max-width: 959px!important
+
+	// Gird
+	@include ndGrid-tablet

@@ -1,0 +1,28 @@
+.cookies
+	+bx
+	background: $RobinsEggBlue
+	bottom: 0px
+	display: none
+	left: 0px
+	padding: 2rem 0px
+	position: fixed
+	width: 100%
+	z-index: 101
+	.close
+		cursor: pointer
+		display: table
+		height: 25px
+		position: absolute
+		right: 10px
+		top: 10px
+		width: 25px
+		z-index: 1
+		&:before
+			+center(vh)
+			+icons('\E14C')
+			color: $White
+			font-size: 1.5625rem
+	h3, p
+		color: $White
+		margin: 1.25rem 0px
+		text-align: center
