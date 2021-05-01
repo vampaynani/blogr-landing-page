@@ -1,11 +1,13 @@
 import React from 'react'
+import Header from './ui/Header'
+import Hero from './sections/Hero'
 
 const Main = () => {
     return (
-        <>
-            <h1>Hola Mundo</h1>
-            <img src="/images/bg-pattern-circles.svg" alt="title" />
-        </>
+        <main className="wrapper">
+            <Header />
+            <Hero />
+        </main>
     )
 }
 

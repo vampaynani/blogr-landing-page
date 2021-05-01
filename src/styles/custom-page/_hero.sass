@@ -1,0 +1,25 @@
+// Hero
+.hero
+	height: 70vh
+	position: relative
+	padding-top: 70px
+	overflow: hidden
+	background-origin: right
+	.container
+		+flex
+		+alignItem
+		+justifyCont
+	h1
+		text-align: center
+		color: $colBase2
+
+// Responsive Smartphone
+@mixin homeCategorias-smartphone
+	// Home Categorias
+	.homeCategorias
+		dl
+			+flexDir
+		dd
+			&:hover
+				> .homeProducto
+					display: none

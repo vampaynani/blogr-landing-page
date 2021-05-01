@@ -10,12 +10,12 @@
 	+bx
 	+fx(all,0.5s)
 	border-radius: 70px
-	border: 1px solid $colBase3
+	background: $colPrim2
 	clear: both
-	color: $colBase3
+	color: $colBase2
 	cursor: pointer
 	display: table
-	font-size: 0.625rem
+	font-size: 1rem
 	font-weight: 500
 	line-height: 1.2
 	margin: 1.25rem auto
@@ -24,18 +24,15 @@
 	position: relative
 	text-align: center
 	text-decoration: none
-	text-transform: uppercase
+	text-transform: capitalize
 	&:hover
-		background: $colPrim1
-		border: 1px solid $colPrim1
-		color: $colBase2
+		background: $colBase2
+		color: $colPrim2
 	&.secundario
-		border: 1px solid $colBase2
-		color: $colBase2
+		color: $colBase3
+		background: none
 		&:hover
-			background: $colBase2
-			border: 1px solid $colBase2
-			color: $colPrim1
+			color: $colBase2
 	&.disabled
 		cursor: default
 		&:hover
