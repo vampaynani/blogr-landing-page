@@ -34,6 +34,16 @@ const State = () => {
                     border-bottom-left-radius: 100px;
                     transform: translate(0%, -50%);
                 }
+                @media only screen and (max-width: 767px) {
+                    .state::before {
+                        background-position-y: top;
+                        background-position-x: center;
+                        background-size: contain;
+                        transform: translate(0%, 0%);
+                        bottom: 0%;
+                        top: auto;
+                    }
+                }
             `}</style>
         </section>
     )

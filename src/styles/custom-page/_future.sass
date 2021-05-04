@@ -18,12 +18,15 @@
 		img
 			+translate(26%, 0%)
 
-@mixin search-smartphone
-	.search
-		li
-			a
-				padding: 1rem 0px 2rem
-			.categoria
-				left: 0px
-				right: inherit
-				bottom: 0.5rem
+@mixin future-smartphone
+	.future
+		h2
+			+center(r)
+			text-align: center
+		.cont-info
+			text-align: center
+		.multimedia
+			img
+				+transformr
+		.grid
+			+flexDir(column-reverse)

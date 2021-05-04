@@ -8,7 +8,10 @@ const Powerful = () => {
                 <div className="grid algCenter">
                     <div className="col-lg-6 col-xs-12">
                         <div className="multimedia">
-                            <img src='/images/illustration-laptop-desktop.svg' alt="Powerful tooling" />
+                            <picture>
+                                <source media="(max-width:769px)" srcSet="/images/illustration-laptop-mobile.svg" alt="Powerful tooling" />
+                                <img src='/images/illustration-laptop-desktop.svg' alt="Powerful tooling" />
+                            </picture>
                         </div>
                     </div>
                     <div className="col-lg-6 col-xs-12">

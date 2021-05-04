@@ -16,7 +16,10 @@ const Future = () => {
                     </div>
                     <div className="col-lg-6 col-xs-12">
                         <div className="multimedia">
-                            <img src="/images/illustration-editor-desktop.svg" alt="designed for the future"/>
+                            <picture>
+                                <source media="(max-width:769px)" srcSet="/images/illustration-editor-mobile.svg" alt="designed for the future" />
+                                <img src="/images/illustration-editor-desktop.svg" alt="designed for the future" />
+                            </picture>
                         </div>
                     </div>
                 </div>
