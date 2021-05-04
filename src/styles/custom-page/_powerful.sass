@@ -1,0 +1,32 @@
+// Powerful
+.powerful
+	margin: 2rem 0px
+	.multimedia, .container
+		overflow: visible
+	h2
+		color: $colPrim3
+	p
+		color: $colBase1
+	.multimedia
+		img
+			+translate(-28%, 0%)
+		
+
+@mixin notas-smartphone
+	.notas
+		&.modulo-a
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(-n+1)
+					max-width: 100%
+		&.modulo-b
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(5n+2)
+					max-width: 100%
+		&.modulo-c
+			[class^="col-"], [class*=" col-"]
+				&:nth-of-type(5n+5)
+					max-width: 100%
+		.multimedia
+			height: auto
+		.contInfo
+			min-height: auto

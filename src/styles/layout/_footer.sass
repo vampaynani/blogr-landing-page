@@ -1,14 +1,20 @@
 .footer
+	padding: 2.5rem 0px
 	background: $colBase1
 	overflow: hidden
 	position: relative
 	width: 100%
-	h6
+	border-top-right-radius: 100px
+	.logo
+		width: 150px
+	h5
 		color: $colBase2
+		margin: 0px 0px 1rem 0px
 	li
+		margin-bottom: 1rem
 		a
 			font-size: 0.75rem
-			color: $colBase2
+			color: $colBase3
 			font-weight: 500
 			&:hover
 				text-decoration: underline	
@@ -21,6 +27,9 @@
 
 @mixin ndFooter-smartphone
 	.footer
-		.legales
-			p
-				text-align: center
+		.logo
+			margin: 1.25rem auto
+		h5, li
+			text-align: center
+		h5
+			margin: 1.25rem 0px
