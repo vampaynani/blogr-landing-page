@@ -44,10 +44,14 @@ const Header = () => {
                                 <img src="/images/icon-arrow-light.svg" alt="Product" />
                             </li>
                         </ul>
+                        <div className="botones">
+                            <button className="boton secundario">Login</button>
+                            <button className="boton">Sing Up</button>
+                        </div>
                     </nav>
-                    <div className="botones">
-                        <button className="boton secundario">Login</button>
-                        <button className="boton">Sing Up</button>
+                    <div className="icons-cont">
+                        <img src="/images/icon-hamburger.svg" alt="blgr" />
+                        <img className="close" src="/images/icon-close.svg" alt="blgr" />
                     </div>
                 </div>
             </div>

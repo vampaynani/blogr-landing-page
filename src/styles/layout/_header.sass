@@ -10,16 +10,19 @@
 		+alignItem
 	.logo
 		margin: 1.25px
-		width: 150px
+		width: 9.375rem
 	.botones
 		margin: 0px
 		margin-left: auto
+	.icons-cont
+		display: none
 	nav
 		+flex
+		+alignItem
+		width: 100%
 		margin: 0px 2rem
 		ul
 			+flex
-			// height: 100%
 			margin: 0px
 			li
 				display: table
@@ -39,17 +42,6 @@
 					text-align: center
 					text-decoration: none
 					vertical-align: middle
-				ul
-					display: block
-					li
-						display: table
-						width: auto
-						margin: 5px 0px
-						font-weight: 700
-						color: $colBase3
-						&:hover
-							color: $colBase1
-							cursor: pointer
 				img
 					+translate(0%, -50%)
 					width: 15px
@@ -68,39 +60,46 @@
 				min-width: 150px
 				&:hover
 					display: table
+				ul
+					display: block
+					li
+						display: table
+						width: auto
+						margin: 5px 0px
+						font-weight: 700
+						color: $colBase3
+						&:hover
+							color: $colBase1
+							cursor: pointer
 
 @mixin ndHeader-smartphone
 	.header
+		.container
+			padding: 0px
+		.logo
+			width: 130px
+			margin: 0.5rem
 		nav
 			display: none
-		// 	ul
-		// 		+flex
-		// 		+flexDir
-		// 		height: calc(100vh - 68px)
-		// 		li
-		// 			+alignItem
-		// 			+flex
-		// 			border-bottom: 1px solid $Mercury
-		// 			float: none
-		// 			overflow: hidden
-		// 			position: relative
-		// 			max-height: 75px
-		// 			&:hover, &.current_page_item
-		// 				a
-		// 					&:before
-		// 						width: 0px
-		// 			&:last-of-type
-		// 				border-bottom: none
-		// 			a
-		// 				display: block
-		// 				padding: 29px 0px
-		// 				position: static
-		// 				text-align: inherit
-		// 				width: 100%
-		// .controles
-		// 	margin: 35px -0.5rem
-		// 	position: absolute
-		// 	right: 20px
-		// 	top: 0px
-		// .settings
-		// 	display: none
+			+flexDir
+			+translate(0%, 100%)
+			position: absolute
+			bottom: 0
+			background: $colBase2
+			width: 80%
+			border-radius: 10px
+			ul
+				+flexDir
+				li
+					margin: 1.25rem 0px
+					p
+						color: $colBase1
+			.botones
+				+flex
+				+flexDir
+				margin: auto
+		.icons-cont
+			display: block
+			margin: 0px 1.5rem 0px auto
+			.close
+				display: none
