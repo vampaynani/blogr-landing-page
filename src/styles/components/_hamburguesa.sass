@@ -1,33 +1,14 @@
 // Hamburguesa
-.hamburguesa
-    +fx(all, 0.3s)
-    width: 35px
-    position: relative
-    display: none
-    &:before , &:after , span
-        +fx(all, 0.3s)
-        background: $colBase2
-        content: ''
-        display: block
-        height: 3px
-    span
-        margin: 6px 0px
-    &.active
-        &:before
-            transform: translateY(14px) rotate(45deg)
-            -webkit-transform: translateY(14px) rotate(45deg)
-            -moz-transform: translateY(14px) rotate(45deg)
-        &:after
-            transform: translateY(-14px) rotate(-45deg)
-            -moz-transform: translateY(-14px) rotate(-45deg)
-            -webkit-transform: translateY(-14px) rotate(-45deg)
-        span
-            transform: scale(0)
-            -moz-transform: scale(0)
-            -webkit-transform: scale(0)
-
+.icon-hamburguesa
+	margin: 0px 0.5rem
+	display: none
+	&:before
+		+fx(all,0.5s)
+	&.activo
+		&:before
+			content: '\e903'
 
 // Responsive Smartphone
 @mixin hamburguesa-smartphone
-	.hamburguesa
+	.icon-hamburguesa
 		display: inline-block
