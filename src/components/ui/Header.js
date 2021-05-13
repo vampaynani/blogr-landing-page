@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Header = () => {
+
     return (
         <header className="header">
             <div className="container">
@@ -49,10 +50,9 @@ const Header = () => {
                             <button className="boton">Sing Up</button>
                         </div>
                     </nav>
-                    <div className="icons-cont">
-                        <img src="/images/icon-hamburger.svg" alt="blgr" />
-                        <img className="close" src="/images/icon-close.svg" alt="blgr" />
-                    </div>
+                    <button className="hamburguesa" >
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </header>
