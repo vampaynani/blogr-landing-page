@@ -14,8 +14,6 @@
 	.botones
 		margin: 0px
 		margin-left: auto
-	.icons-cont
-		display: none
 	nav
 		+flex
 		+alignItem
@@ -42,6 +40,15 @@
 					text-align: center
 					text-decoration: none
 					vertical-align: middle
+					position: relative
+					&::before
+						transform: translate(100%, -50%) rotate(90deg)
+						top: 50%
+						position: absolute
+						content: '>'
+						right: -0.5rem
+						font-size: 20px
+						margin: 0px
 				img
 					+translate(0%, -50%)
 					width: 15px
@@ -88,18 +95,25 @@
 			background: $colBase2
 			width: 80%
 			border-radius: 10px
+			&.active
+				+flex
 			ul
 				+flexDir
 				li
+					+flex
+					+flexDir
 					margin: 1.25rem 0px
 					p
 						color: $colBase1
+						&::before
+							color: $colBase1
+							right: -0.3125rem
+				.dropdown
+					+center(r)
+					position: relative
 			.botones
 				+flex
 				+flexDir
 				margin: auto
-		.icons-cont
-			display: block
+		.hamburguer
 			margin: 0px 1.5rem 0px auto
-			.close
-				display: none
